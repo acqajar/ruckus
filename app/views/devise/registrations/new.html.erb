@@ -1,17 +1,36 @@
 <h2>Sign up</h2>
 
-<%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
-  <%= f.error_notification %>
 
-  <div class="form-inputs">
-    <%= f.input :email, required: true, autofocus: true %>
-    <%= f.input :password, required: true, hint: ("#{@minimum_password_length} characters minimum" if @minimum_password_length) %>
-    <%= f.input :password_confirmation, required: true %>
-  </div>
+<div class="wrapper">
+	
+		<h1>Welcome</h1>
+		
+		<%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+  		<%= f.error_notification %>
+		<form class="form">
+			<%= f.input :email, required: true, autofocus: true, placholder: "Username" %>
 
-  <div class="form-actions">
-    <%= f.button :submit, "Sign up" %>
-  </div>
+			<%= f.input :password, required: true, hint: ("#{@minimum_password_length} characters minimum" if @minimum_password_length), placeholder: "Password"%>
+
+			<%= f.input :password_confirmation, required: true, placeholder: "Confirm Password" %>
+
+			<%= f.button :submit, "Sign up", class: "btn btn-large"%>
+		</form>
 <% end %>
 
-<%= render "devise/shared/links" %>
+
+
+	
+	<ul class="bg-bubbles">
+		<li></li>
+		<li></li>
+		<li></li>
+		<li></li>
+		<li></li>
+		<li></li>
+		<li></li>
+		<li></li>
+		<li></li>
+		<li></li>
+	</ul>
+</div>
