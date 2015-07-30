@@ -1,5 +1,7 @@
 source 'https://rubygems.org'
 
+gem 'acts_as_votable'
+
 gem 'simple_form'
 
 gem 'bootstrap-sass'
