@@ -15,10 +15,13 @@
   <tbody>
     <% @posts.each do |post| %>
       <tr>
-        <td class ="col-md-2"><%= link_to post.title, post %> <%= link_to (image_tag (post.image.url(:medium))), post %>
+        <td class ="col-md-2">
+          <%= link_to (post) do %>
+            <%= post.title%><%= image_tag (post.image.url(:medium)) %> <%= "#{post.comments.count } Comments" %> 
+          <% end %>
         </td>
 
-        <td class ="col-md-2"><%= link_to post.link, "http://#{post.link}", :target => '_blank' %></td>
+        <td class ="col-md-2"><%= link_to post.link, "#{post.link}", :target => '_blank' %></td>
 
         <td ><%= post.description %><%= link_to 'Show', post %> 
           
